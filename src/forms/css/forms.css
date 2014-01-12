@@ -1,3 +1,4 @@
+.pure-form input:not([type]),
 .pure-form input[type="text"],
 .pure-form input[type="password"],
 .pure-form input[type="email"],
@@ -28,9 +29,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
 }
 
+.pure-form input:not([type]):focus,
 .pure-form input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
 .pure-form input[type="email"]:focus,
@@ -63,6 +64,7 @@
     margin: 0.5em 0;
     display: block;
 }
+.pure-form input:not([type])[disabled],
 .pure-form input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
@@ -78,15 +80,19 @@
 .pure-form input[type="tel"][disabled],
 .pure-form input[type="color"][disabled],
 .pure-form select[disabled],
-.pure-form textarea[disabled],
-.pure-form input[readonly],
-.pure-form select[readonly],
-.pure-form textarea[readonly] {
+.pure-form textarea[disabled] {
     cursor: not-allowed;
     background-color: #eaeded;
     color: #cad2d3;
-    border-color: transparent;
 }
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+    background: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
 .pure-form input:focus:invalid,
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
@@ -129,6 +135,7 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
+.pure-form-stacked input:not([type]),
 .pure-form-stacked input[type="text"],
 .pure-form-stacked input[type="password"],
 .pure-form-stacked input[type="email"],
@@ -147,6 +154,7 @@
 .pure-form-stacked label,
 .pure-form-stacked textarea {
     display: block;
+    margin: 0.25em 0;
 }
 
 .pure-form-aligned input,
@@ -159,6 +167,9 @@
     *display: inline;
     *zoom: 1;
     vertical-align: middle;
+}
+.pure-form-aligned textarea {
+    vertical-align: top;
 }
 
 /* Aligned Forms */
@@ -177,9 +188,10 @@
 }
 
 /* Rounded Inputs */
+.pure-form input.pure-input-rounded,
 .pure-form .pure-input-rounded {
-    border-radius: 20px;
-    padding-left: 1em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
 }
 
 /* Grouped Inputs */
