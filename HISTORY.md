@@ -1,8 +1,74 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.5.0 (2014-05-27)
+------------------
+
+### Base
+
+* Added the `.pure-img` class name for make images scale with the viewport in
+  fluid layouts.
+
+### Grids
+
+* __[!]__ Removed `.pure-g-r` from core, in favor of a mobile-first responsive
+  grid system. ([#24][], [#267][])
+
+  To use the mobile-first grid system, you need to pull in `pure.css`, along
+  with `grids-responsive.css`. We also have `grids-responsive-old-ie.css` that
+  you can serve to IE < 9 users so that they can view a desktop-version of your
+  website:
+
+    ```html
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css">
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css">
+    <!--<![endif]-->
+    ```
+
+  Find out more about the new grid system at <http://purecss.io/grids/>.
+
+### Tables
+
+* Switched cell padding in Tables from `px` to `em` units, and also increased
+  the amount of padding to `padding: 0.5em 1em`.
+
+
+[#24]: https://github.com/yui/pure/issues/24
+[#267]: https://github.com/yui/pure/pull/267
+
+
+0.4.2 (2014-02-13)
+------------------
+
+* Added `main` to Pure's `bower.json` file to allow easier integration with
+  build processes and tooling. ([#286][] @stevenvachon)
+
+### Forms
+
+* Improved how `<input type="color">` elements look in Chrome by fixing
+  paddings. ([#283][] @jpetto)
+
+* Removed `font-size` rules from `<input>`, `<legend>`, and `<fieldset>`
+  elements within `.pure-form`. Font sizes are now inherited from the
+  application's CSS file. ([#265][])
+
+* Invalid `<input>` elements within a Pure Form no longer explicitly set a
+  `border-width`. ([#295][] @kwando)
+
+
+[#265]: https://github.com/yui/pure/issues/265
+[#283]: https://github.com/yui/pure/issues/283
+[#286]: https://github.com/yui/pure/issues/286
+[#295]: https://github.com/yui/pure/issues/295
+
+
+0.4.1 (2014-02-06)
+------------------
 
 ### Base
 
@@ -36,7 +102,8 @@ NEXT
   Forms to fix an alignment issue where its label was aligned to the middle.
   ([#174][] @rictorres, @ItsAsbreuk)
 
-* Added styling for `<input>` elements that don't have a `type` attribute. ([#261][] @dougdavies)
+* Added styling for `<input>` elements that don't have a `type` attribute.
+  ([#261][] @dougdavies)
 
 ### Grids
 
@@ -66,6 +133,12 @@ NEXT
 
 [rework-pure-grids]: https://github.com/ericf/rework-pure-grids
 [Rework]: https://github.com/visionmedia/rework
+
+
+0.4.0 (2014-02-06)
+------------------
+
+* __[!]__ Corrupted release build, use `0.4.1`.
 
 
 0.3.0 (2013-09-09)
